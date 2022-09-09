@@ -9,11 +9,11 @@
  */
 int main(void)
 {
+	int i;
+
 	char alphabet;
 
 	alphabet = 'a';
-	int i;
-
 	for (i = 0; i < 26; i++)
 	{
 		if (alphabet != 'q' && alphabet != 'e')

@@ -15,14 +15,7 @@ int main(void)
 	{
 		if ((i % 10) > (i / 10))
 		{
-			if (i > 9)
-			{
-				putchar((i / 10) + '0');
-			}
-			else
-			{
-				putchar('0');
-			}
+			putchar((i / 10) + '0');
 			putchar((i % 10) + '0');
 			if (i < 89)
 			{
@@ -31,5 +24,6 @@ int main(void)
 			}
 		}
 	}
+	putchar('\n');
 	return (0);
 }

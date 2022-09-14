@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * _abs - function to print absolute value of a number
  *
- * Description: function to print absolute value of a number
+ * @no: a number
  *
  * Return: Always 0.
  */

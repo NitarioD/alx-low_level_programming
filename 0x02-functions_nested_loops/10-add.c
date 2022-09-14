@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * add - function that returns the addition of two integers
  *
- * Description: function that returns the addition of two integers
+ * @first: number one
+ *
+ * @second: number two
  *
  * Return: Always 0.
  */

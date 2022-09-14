@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * print_to_98 - function that returns the addition of two integers
  *
- * Description: function that returns the addition of two integers
+ * @c: number
  *
  * Return: Always 0.
  */

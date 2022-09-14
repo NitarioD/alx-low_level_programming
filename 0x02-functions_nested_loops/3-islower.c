@@ -1,15 +1,16 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * _islower - checks if alphabet is upper or lower case
  *
- * Description: checks if alphabet is upper or lower case
+ * @c: a character
  *
  * Return: Always 0.
  */
 int _islower(int c)
 {
 	int i;
+
 	if (c >= 65 && c <= 90)
 	{
 		return (0);

@@ -21,7 +21,10 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar(' ');
+				if (column != 0)
+				{
+					_putchar(' ');
+				}
 			}
 			_putchar('0' + ((line * column) % 10));
 			if (column < 9)

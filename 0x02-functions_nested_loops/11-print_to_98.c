@@ -44,16 +44,16 @@ void print_to_98(int n)
 				_putchar('-');
 				j = -n;
 			}
-			if (n < 10)
+			if (j < 10)
 			{
 				_putchar('0' + j % 10);
 			}
-			else if (n > 9 && n <= 99)
+			else if (j > 9 && j <= 99)
 			{
 				_putchar('0' + (j / 10));
 				_putchar('0' + (j % 10));
 			}
-			else if (n > 99 && n < 999)
+			else if (j > 99 && j < 999)
 			{
 				_putchar('0' + (j / 100));
 				_putchar('0' + (j % 100) / 10);

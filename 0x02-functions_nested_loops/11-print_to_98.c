@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_to_98 - function that returns the addition of two integers
+ * print_to_98 - function thatmprints natural numbers from n to 98
  *
- * @c: number
+ * @n: number
  *
  * Return: Always 0.
  */
@@ -11,54 +11,57 @@ void print_to_98(int n)
 {
 	int j;
 
-	int numofdigits;
-
-	numofdigits = 1;
-
-	while((n / 10) != 0)
+	if (n > 98)
 	{
-		numofdigits++;
-		n /= 10;
-	}
-	
-	if (n < 98)
-	{
-		while(n != 98)
+		for (n; n > 98; n--)
 		{
-			if ( n < 0)
+			if (n < 10)
+			{
+				_putchar('0' + n % 10);
+			}
+			else if (n > 9 && n <= 99)
+			{
+				_putchar('0' + (n / 10));
+				_putchar('0' + (n % 10));
+			}
+			else if (n > 99 && n < 999)
+			{
+				_putchar('0' + (n / 100));
+				_putchar('0' + (n % 100) / 10);
+				_putchar('0' + (n % 100) % 10);
+			}
+			_putchar(',');
+			_putchar(' ');
+		}
+	}
+	else
+	{
+		for (n; n < 98; n++)
+		{
+			j = n;
+			if (n < 0)
 			{
 				_putchar('-');
 				j = -n;
 			}
-			else
+			if (n < 10)
 			{
-				j = n;
+				_putchar('0' + j % 10);
 			}
-			for (numofdigits; numofdigits > 1; numofdigits--)
+			else if (n > 9 && n <= 99)
 			{
-				_putchar('0' + (j / (10**numofdigits)));
-				j -= (j / (10**numofdigits));
+				_putchar('0' + (j / 10));
+				_putchar('0' + (j % 10));
 			}
-			_putchar('0' + (j % 10));
+			else if (n > 99 && n < 999)
+			{
+				_putchar('0' + (j / 100));
+				_putchar('0' + (j % 100) / 10);
+				_putchar('0' + (j % 100) % 10);
+			}
 			_putchar(',');
 			_putchar(' ');
-			n++;
-		}
-	}
-	else if (n > 98)
-	{
-		while(n != 98)
-		{
-			j = n;
-			for (numofdigits; numofdigits > 1; numofdigits--)
-			{
-				_putchar('0' + (j / (10**numofdigits)));
-				j -= (j / (10**numofdigits));
-			}
-			_putchar('0' + (j % 10));
-			_putchar(',');
-			_putchar(' ');
-			n--;
+
 		}
 	}
 	_putchar('9');

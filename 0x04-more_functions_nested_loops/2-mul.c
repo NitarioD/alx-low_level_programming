@@ -5,9 +5,12 @@
  *
  * @a: integer one
  * @b: integer two
- * Return: int
+ * Return: multiplication
  */
 int mul(int a, int b)
 {
-	return (a * b);
+	int i;
+
+	i = a * b;
+	return (i);
 }

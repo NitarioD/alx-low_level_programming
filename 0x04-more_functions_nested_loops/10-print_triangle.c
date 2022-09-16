@@ -3,6 +3,7 @@
 /**
  * print_triangle: function that prints a triangle
  *
+ * @size: integer
  * Return: void
  */
 void print_triangle(int size)

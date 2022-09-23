@@ -10,6 +10,7 @@
 char *cap_string(char *str)
 {
 	int i, j;
+
 	char k[] = " \t\n,;.!?\"(){}";
 
 	i = 1;

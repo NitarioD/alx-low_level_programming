@@ -9,35 +9,18 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 0;
-	int mul = 1;
-	int val = 0;
-	char err[] = "Error";
+	int i;
+	int j;
+	int mul;
 
-	if (argc != 3)
+	if (argc <= 2)
 	{
-		while (err[i] != '\0')
-		{
-			_putchar(err[i]);
-			i++;
-		}
-		_putchar('\n');
+		printf("Error\n");
 		return (0);
 	}
-	i = 1;
-	argc--;
-	while (argc--)
-	{
-		val = 0;
-		while (*argv[i] != '\0')
-		{
-			/*_putchar(*argv[i]);*/
-			val = (val * 10) + (*argv[i] - '0');
-			*argv[i]++;
-		}
-		mul *= val;
-		i++;
-	}
+	i = atoi(argv[1]);
+	j = atoi(argv[2]);
+	mul = i * j;
 	printf("%d\n", mul);
 	return (0);
 }

@@ -9,7 +9,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, size, size2;
+	int i, size, size2;
 	char *cpy;
 
 	size = 0;

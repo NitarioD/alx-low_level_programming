@@ -16,26 +16,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int ttLen;
 	char *concat;
 
-	if (s1 != NULL)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	while (s1[i] != '\0')
 	{
-		while (s1[i] != '\0')
-		{
-			size1++;
-			i++;
-		}
+		size1++;
+		i++;
 	}
 	i = 0;
-	if (s2 != NULL)
+	while (s2[i] != '\0')
 	{
-		while (s2[i] != '\0')
-		{
-			size2++;
-			i++;
-		}
+		size2++;
+		i++;
 	}
 	if (n < size2)
 		size2 = n;
-	ttLen = size1 + size2 + 1;
+	ttLen = size1 + size2;
 	concat = malloc(ttLen);
 	if (concat == NULL)
 		return (NULL);

@@ -18,24 +18,30 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	i = 0;
 	while (s1[i] != '\0')
+	{
+		size1++;
 		i++;
-	cpy = malloc(sizeof(char) * (i + n + 1));
-	if (cpy == NULL)
+	}
+	i = 0;
+	while (s2[i] != '\0')
+	{
+		size2++;
+		i++;
+	}
+	if (n < size2)
+		size2 = n;
+	ttLen = size1 + size2;
+	concat = malloc(sizeof(char) * ttLen);
+	if (concat == NULL)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s1[i] != '\0')
-	{
-		cpy[i] = s1[i];
-		i++;
-	}
-	while (j < n && s2[j] != '\0')
-	{
-		cpy[i] = s2[j];
-		i++, j++;
-	}
-	cpy[i] = '\0';
-	return (cpy);
+	for (j = 0; j < size1; j++)
+		concat[j] = s1[j];
+	i = j;
+	for (j = 0; j < size2; j++)
+		concat[i + j] = s2[j];
+	concat[ttLen] = '\0';
+	return (concat);
+>>>>>>> 0cd5b998fc9a3a8fe269d02a703d62f98a5e874e
 }

@@ -21,6 +21,7 @@ unsigned int i;
 		new_space = malloc(new_size);
 		if (new_space == NULL)
 			return (NULL);
+		return ((void *)new_space);
 	}
 	if (new_size == 0 && ptr != NULL)
 		free(ptr);
